@@ -81,6 +81,12 @@ p {
         line-height: 2.5rem;
         font-size: small;
     }
+    .experiencia, .estudios {
+        width: 100%;
+        padding: 1rem;
+        margin-top: 1rem;
+        font-size: small;
+    }
 }
 
 @media (min-width: 1024px){
@@ -91,5 +97,18 @@ p {
         gap: 3rem;
         justify-content: flex-end;
         margin: 0 3rem;
+    }
+    .experiencia, .estudios{
+        display: flex;
+        justify-content: center;
+        /* padding: 2rem; */
+    }
+    .container-experiencia, .container-estudios{
+        width: 100%;
+        padding: 1rem;
+        /* margin-top: 2rem; */
+        line-height: 2.5rem;
+        font-size: large;
+        /* margin: 1rem; */
     }
 }
