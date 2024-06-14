@@ -1,114 +1,88 @@
-
+:root {
+    --body-bg-color: rgb(43,43,70);
+    --text-color: white;
+    --colorh1-color: rgb(215,211,211);
+}
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    background-color: #f4f4f4;
-    color: #333;
+    display: flex; /*Agregado en clase cuatro*/
+    flex-direction: column; /*Agregado en clase cuatro*/
+    background: var(--body-bg-color);
+    color: var(--text-color);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
-.header {
-    background-color: #333;
-    color: #fff;
+/*Definimos el color de los titulos*/
+h1, h2{
+    color: var(--colorh1-color);
+}
+/*Titulo del header*/
+.titulo{
+    display: flex;
+    margin: 3rem;
+}
+/*Barra de navegacion*/
+.navigation {
+    display: flex; /*Utiliza felxbox para organizar los elementos hijos (items de navegacion) en una fila flexible*/
+    gap: 3rem; /*Establece un espacio de 3 rem entre cada elemento hijo dentro del contenedor flex*/
+    list-style: none; /*Elimina los puntos de lista predeterminado de los elementos de la lista*/
+    justify-content: flex-end; /*Alinea los elementos hijos al final del contenedor flex, a la derecha. */
+    margin: 0 3rem; /*Establece un margen de 0 en la parte superior e inferior y de 3 rem en los lados iz<quierdo y derecho */
+}
+
+/*Enlaces de la barra de navegacion configurados como si fueran botones*/
+.navigation li {
+    font-size: 1rem;
+    width: 100px;
     text-align: center;
-    padding: 1rem 0;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    background: #f0eaea1a;
+    box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.5);
 }
 
-.navigation{
-    text-align: center;
-    padding: 1rem 0;
-    display: flex;
-    /*justify-content: space-between;*/
-    align-items: center;
-}
-
-ul{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 15px;
-}
-
-li{
-    list-style-type: none;
-    
-}
+/*Estilo de los enlaces de la barra de navegacio*/
 a{
-    text-decoration: none;
-}
-.li__a{
-    
-    color: #f4f4f4;
-}
-.about{
-   display: flex; 
-   justify-content: center; /*Esto centra el contenido*/
-}
-.about-container {
-    display: flex;
-    width: 50%;
-    padding: 2rem;
-    margin-top: 5rem;
-    line-height: 2.5rem;
-    font-size: large;
-    color: rgb(1, 49, 49);
-}
-h1 {
-    margin-top: 0;
-}
-p {
-    line-height: 1.6;
+    text-decoration: none; /*Elimina el subrayado predeterminado de los enlaces*/
+    color: rgb(215, 211, 211); /*Establece el color del texto de los enlaces a negro*/
 }
 
-/*Inicio responsivo*/
-@media (max-width: 767px){
+/*Todo lo que contiene el main*/
+.main-container{
+    display: flex;
+    flex-direction: column;
+}
+
+/*Medias query agrupadas*/
+/* Celular (Pantalla pequeña, hasta 767px) */
+/* Creamos una media query*/
+@media (max-width: 767px) {
     .titulo{
         justify-content: center;
     }
-    .header{
-        display: flex;
+    .navigation {
         flex-direction: column;
         gap: 1rem;
         align-items: center;
     }
-    .about-container{
-        width: 100%;
-        padding: 1rem;
-        margin-top: 1rem;
-        line-height: 2.5rem;
-        font-size: small;
+}    
+/*Tableta (Pantalla medianas, entre 768px y 1023px*/
+@media (min-width: 768px) and (max-width: 1023px) {
+    .titulo {
+        justify-content: center;
     }
-    .experiencia, .estudios {
-        width: 100%;
-        padding: 1rem;
-        margin-top: 1rem;
-        font-size: small;
+    .navigation {
+        gap: 2rem;
+        justify-content: center;
     }
 }
 
-@media (min-width: 1024px){
-    .titulo{
+/* Escritorio (Pantallas anchas, 1024 y superiores) */
+@media (min-width: 1024px) {
+    .titulo {
         justify-content: flex-start;
     }
-    .navigation{
+    .navigation {
         gap: 3rem;
-        justify-content: flex-end;
+        justify-content:  flex-end;
         margin: 0 3rem;
-    }
-    .experiencia, .estudios{
-        display: flex;
-        justify-content: center;
-        /* padding: 2rem; */
-    }
-    .container-experiencia, .container-estudios{
-        width: 100%;
-        padding: 1rem;
-        /* margin-top: 2rem; */
-        line-height: 2.5rem;
-        font-size: large;
-        /* margin: 1rem; */
     }
 }

@@ -1,75 +1,114 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-    <link rel="stylesheet" href="/CSS/style.css">
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!--Especificamos el idioma del contenido del documento-->
+    <meta http-equiv="content-language" content="es">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portafolio Solucion202</title>
-    <meta name="keywords" content="HTML, CSS, JavaScript, web development, programming, UTN">
-    <meta name="description" content="Este es el portafolio del equipo solución 202 para la UTN FRSR.">
+    <meta name="description" content="Portafolio de Solucion 202, Tecnicos en programacion">
+    <meta name="keywords" content="portafolio, python, R, java, javascript">
+    <meta name="author" content="Solucion 202">
+    
+    <title>Portafolio Web</title>
+    <link rel="stylesheet" href="CSS/style.css">
+    <link rel="stylesheet" href="CSS/estudios.css">
+    <link rel="stylesheet" href="CSS/experiencia.css">
+    <link rel="stylesheet" href="CSS/sobremi.css">
+    <link rel="stylesheet" href="CSS/proyecto.css">
 </head>
 <body>
-    <header class="header">
-        <h1 class="titulo">Equipo Solucion202</h1>
-        <nav class="navigation">
-            <ul>
+    <!-- Cuerpo del documento, contienee el contenido visible para los usuarios-->
+    <header> 
+    <!-- Seccion de cabecera de la pagina, generalmente contiene logotipos, navegacion y titulos-->
+        <h1 class="titulo">Solucion 202 - Grupo Tecnico en Programacion</h1>
+        <!-- Encabezado principal de la pagina, tipicamente usado para el titulo o nombre del sitio-->
+        <!-- Esta es la parte donde los motores de busqueda se enfocan-->
+        <nav>
+    <!--Aqui vamos a agregar las partes esenciales de la pagina para poder navegar, por ejemplo, el boton de contacto-->
+            <ul class="navigation">
                 <li>
-                    <a class="li__a" href="#about">Sobre nosotros</a>
+            <!-- Nos da la etiqueta li, la posibilidad de navegar hasta donde nos indique-->
+                    <a href="#about">Sobre nosotros</a>
                 </li>
-                <li>
-                    <a class="li__a" href="#project">Proyectos</a>
-                </li>
-                <li>
-                    <a class="li__a" href="#contact">Contacto</a>
-                </li>
+                <li><a href="#experiencia">Experiencia</a></li>
+                <li><a href="#estudios">Mis estudios</a></li>
+                <li><a href="#projects">Proyectos</a></li>
+                <li><a href="#contact">Contactos</a></li>
             </ul>
-        </nav>        
+        </nav>
     </header>
-    <main>
-        <section class="about">
-            <article class="about-container">
+    <main class="main-container">
+        <section class="sobremi">
+            <article class="container-sobremi">
+                <img class="imagen-perfil" src="assets/solucion202.jpg" alt="logo nuestro" width="200" height="200">
                 <h2>
-                    Somos un equipo de estudiantes apasionados por la programación y la resolución de problemas. Nos especializamos en diversas tecnologías y estamos siempre en búsqueda de nuevos desafíos.
-
+                    Somos <b>Tecnicos Universitarios en Programacion<b> estudiando en la UTN - FRSR, Argentina. 
+                    Nos apasiona programar y desarrollar soluciones.
                 </h2>
             </article>
         </section>
         <section id="experiencia" class="experiencia">
             <article class="container-experiencia">
-                <h2>Experiencia Laboral</h2>
-                <h3>Solucion 202</h3>
-                <h4>Inicio en Marzo 2024 - De la cursada de la Tecnicatura en la UTN FRSR
-                    <a href="https://github.com/Solucion202UTN"> Nuestros proyectos en GitHub</a>
-                </h4>
-                <p>Somos un equipo que se ha formado a partir de Marzo del 2024 para cursar la Tecnicatura Universitaria en Programación. <br>Venimos trabajando los lenguajes: Python, Java y Javascript.</p>
+                <h2>Experiencia laboral</h2>
+                <a href="https://github.com/Solucion202UTN"> Nuestros proyectos en GitHub</a>
+                <h3>UTN
+                    <a href="pagina" target="_blank"> Ir al proyecto</a>
+                </h3>
+                <p>Creamos proyectos para poder insertarnos en el mundo laboral de la programacion</p>
             </article>
-        </section id="estudios" class="estudios">
+        </section>
+        <section id="estudios" class="estudios">
             <article class="container-estudios">
                 <h2>Mis estudios</h2>
-                <p>Descripción de los estudios...</p>
+                <h6>Febrero 2024 - Diciembre 2025</h6>
+                <h3>Titulo: Tecnico Universitario en programacion</h3>
+                <div class="container-estudios-section">
+                    <img class="imagen-perfil1" src="./Assets/UTNSRF.png" alt="UTN" width="100" height="100">
+                    <p>Estudiante de la Universidad Nacional Tecnologica de San Rafael. 
+                        estamos capacitado para: Analizar un problema de procesamiento de datos y desarrollarlo en un lenguaje apropiado para su resolución por una computadora, seleccionando el algoritmo adecuado, la técnica de procesamiento correspondiente y conformando un programa correctamente estructurado.
+                        · Elaborar y corregir los programas en lenguajes superiores.
+                        · Realizar la elaboración detallada de tareas específicas definidas por el Analista de Sistemas de Computación.
+                        · Analizar, depurar y transferir la información procesada al especialista que ha de utilizarla.
+                    </p>
+                </div>
             </article>
-        <section>
         </section>
-        <div id="project">
-            <h2>Proyectos destacados</h2>
-            <ul>
-                <li><a href="#">Proyecto 1</a></li>
-                <li><a href="#">Proyecto 2</a></li>
-                <li><a href="#">Proyecto 3</a></li>
-            </ul>
-        </div>
-        <div id="contact">
-            <h2>Contacto</h2>
-        <p>Puedes encontrarnos en:</p>
-        <ul>
-            <li>Email: contacto@solucion202.com</li>
-            <li>Teléfono: +XX XXX XXX XXX</li>
-            <li>Redes sociales: <a href="#">Twitter</a>, <a href="#">Facebook</a>, <a href="#">Instagram</a></li>
-        </ul>
-        </div>
-        
-    </div>
-</main>
+        <section id="proyectos" class="proyectos">
+            <h2>Proyectos</h2>
+            <div class="galeria-proyectos">
+                <div class="proyecto">
+                    <img src="assets/proyecto1.jpeg" alt="Foto del proyecto 1">
+                    <h3>Proyecto 1</h3>
+                    <p>
+                        Descripcion del proyecto...
+                    </p>
+                    <a href="#">Ver más</a>
+                    <a href="#">GitHub</a>
+                    <a href="#">Tecnologias</a>
+                </div>
+                <div class="proyecto">
+                    <img src="assets/proyecto2.png" alt="Foto del proyecto 2">
+                    <h3>Proyecto 2</h3>
+                    <p>
+                        Descripcion del proyecto...
+                    </p>
+                    <a href="#">Ver más</a>
+                    <a href="#">GitHub</a>
+                    <a href="#">Tecnologias</a>
+                </div>
+                <div class="proyecto">
+                    <img src="assets/proyecto3.png" alt="Foto del proyecto 3">
+                    <h3>Proyecto 3</h3>
+                    <p>
+                        Descripcion del proyecto... 
+                    </p>
+                    <a href="#">Ver más</a>
+                    <a href="#">GitHub</a>
+                    <a href="#">Tecnologias</a>
+                </div>
+                <!--Aqui se pueden agregar mas proyectos-->
+            </div>
+        </section>
+    </main>
 </body>
 </html>
